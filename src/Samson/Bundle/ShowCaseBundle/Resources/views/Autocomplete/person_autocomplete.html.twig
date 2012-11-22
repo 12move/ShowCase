@@ -1,0 +1,6 @@
+{% if highlight %}
+{{ result.firstName | highlight }} {{ result.lastName | highlight }}<br>
+Company: {{ result.company | highlight }}
+{% else %}
+{{ result.firstName }} {{ result.lastName }}
+{% endif %}

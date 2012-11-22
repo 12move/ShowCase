@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="samson_show_case.form_type.company_selector" class="Samson\Bundle\ShowCaseBundle\Form\Type\CompanySelectorType">
+            <tag name="form.type" alias="company_selector"/>
+        </service>
+        <service id="samson_show_case.form_type.person_selector" class="Samson\Bundle\ShowCaseBundle\Form\Type\PersonSelectorType">
+            <tag name="form.type" alias="person_selector"/>
+        </service>
+    </services>
+</container>

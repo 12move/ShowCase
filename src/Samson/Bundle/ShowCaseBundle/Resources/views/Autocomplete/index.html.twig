@@ -1,0 +1,25 @@
+{% extends "SamsonShowCaseBundle::base.html.twig" %}
+
+{% block header %}
+<script type="text/javascript" src="{{ asset('/bundles/samsonshowcase/js/jquery-1.8.3.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/bundles/samsonshowcase/js/select2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/bundles/samsonautocomplete/js/autocomplete.js') }}"></script>
+<link type="text/css" rel="stylesheet" href="{{ asset('/bundles/samsonshowcase/css/select2.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ asset('/bundles/samsonautocomplete/css/autocomplete.css') }}">
+{% endblock %}
+
+{% block body %}
+<h2>Company</h2>
+<form method="POST" action="{{ path("autocomplete") }}">
+{{ form_errors(company_form) }}
+{{ form_label(company_form) }}: {{ form_widget(company_form) }} (example: pre-filled data)
+<input type="submit" value="Check">
+</form>
+
+<h2>Person</h2>
+<form method="POST" action="{{ path("autocomplete") }}">
+{{ form_errors(person_form) }}
+{{ form_label(person_form) }}: {{ form_widget(person_form) }} (example: search in relations)
+<input type="submit" value="Check">
+</form>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Samson IT Show case</title>
+        
+        {% block header %}
+        {% endblock %}
+    </head>
+    
+    <body>
+        <div id="top">
+            <h1>Samson IT Show case</h1>
+            <a href="{{ path('home') }}">To menu</a>
+            
+            {% set notice = app.session.flashbag.get('notice') %}
+            {% if notice|length %}
+                <h2>Flash notice</h2>
+                <ul>
+                {% for flashMessage in notice %}
+                    <li>{{ flashMessage }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        <div>
+        <div id="content">
+            {% block body "Welcome to the Samson IT show case!" %}
+        </div>
+    </body>
+</html>

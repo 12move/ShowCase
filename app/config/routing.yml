@@ -1,0 +1,5 @@
+samson_show_case:
+    resource: "@SamsonShowCaseBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
