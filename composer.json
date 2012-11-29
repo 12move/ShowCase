@@ -19,7 +19,8 @@
         "sensio/generator-bundle": "2.1.*",
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
-        "samson/autocomplete-bundle": "dev-master"
+        "samson/autocomplete-bundle": "dev-master",
+        "doctrine/data-fixtures": "1.0.*@alpha"
     },
     "scripts": {
         "post-install-cmd": [

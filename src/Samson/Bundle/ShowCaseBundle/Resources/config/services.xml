@@ -11,5 +11,9 @@
         <service id="samson_show_case.form_type.person_selector" class="Samson\Bundle\ShowCaseBundle\Form\Type\PersonSelectorType">
             <tag name="form.type" alias="person_selector"/>
         </service>
+        <service id="samson_show_case.kernel_event_listener" class="Samson\Bundle\ShowCaseBundle\Listener\RequestListener">
+            <argument type="service" id="doctrine.orm.default_entity_manager"/>
+            <tag name="kernel.event_listener" event="kernel.request"/>
+        </service>
     </services>
 </container>
