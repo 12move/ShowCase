@@ -23,16 +23,16 @@ class AutocompleteController extends Controller
     {
         $companyForm = $this->createForm(
             'company_selector',
-            $this->getDoctrine()->getEntityManager()->find('SamsonShowCaseBundle:Company', 1),
+            $this->getDoctrine()->getManager()->find('SamsonShowCaseBundle:Company', 1),
             array(
-                'validation_constraint' => new \Symfony\Component\Validator\Constraints\NotNull()
+                'constraints' => new \Symfony\Component\Validator\Constraints\NotNull()
             )
         );
         $personForm = $this->createForm(
             'person_selector',
             null,
             array(
-                'validation_constraint' => new \Symfony\Component\Validator\Constraints\NotNull()
+                'constraints' => new \Symfony\Component\Validator\Constraints\NotNull()
             )
         );
 
